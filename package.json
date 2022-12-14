@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "jest --watchAll --verbose --coverage",
-    "testCI": "jest --verbose --coverage"
+    "CItests": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
