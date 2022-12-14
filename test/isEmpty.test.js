@@ -1,5 +1,7 @@
 import isEmpty from '../lib/src/isEmpty'
 
 describe('isEmpty function', () => {
-  // start testing
+  test('should return true if parameter is null ', () => {
+    expect(isEmpty(null)).toBe(true)
+  })
 })
