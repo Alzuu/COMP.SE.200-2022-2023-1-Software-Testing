@@ -10,8 +10,8 @@ on:
   
 
 jobs:
-  build:
-
+  test:
+    name: Run Jest unit tests
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,11 +28,10 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run CItests
-
     - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()    
-        with:
-          name: JEST Unit Tests            
-          path: reports/jest-junit.xml    # Path to test results
-          reporter: jest-junit        # Format of test results
+      uses: dorny/test-reporter@v1
+      if: success() || failure()
+      with:
+        name: JEST Unit Tests
+        path: reports/jest-junit.xml
+        reporter: jest-junit
