@@ -1,4 +1,3 @@
-import map from '../lib/src/map';
 import toNumber from '../lib/src/toNumber'
 
 describe('toNumber should', () => {
